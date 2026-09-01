@@ -9,7 +9,12 @@ export function AppCard({ app }: { app: AppEntry }) {
     <article className="app-card" style={{ '--app-accent': app.accent } as React.CSSProperties}>
       <div className="app-card-glow" />
       <header className="app-card-header">
-        <AppIdentity icon={app.icon} accent={app.accent} />
+        <AppIdentity
+          icon={app.icon}
+          accent={app.accent}
+          iconUrl={app.iconUrl}
+          alt={`Ícone do aplicativo ${app.name}`}
+        />
         <div className="app-title-wrap">
           <h3>{app.name}</h3>
           <span>{app.categories.map((c) => CATEGORY_LABELS[c]).join(' · ')}</span>
