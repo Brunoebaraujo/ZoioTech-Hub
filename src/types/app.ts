@@ -22,6 +22,7 @@ export interface AppEntry {
   categories: AppCategory[]
   status: AppStatus
   icon: AppIconKey
+  iconUrl?: string
   accent: string
   tags: string[]
   appUrl?: string
