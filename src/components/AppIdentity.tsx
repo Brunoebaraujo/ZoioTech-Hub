@@ -32,11 +32,34 @@ const icons: Record<AppIconKey, LucideIcon> = {
   assessment: ClipboardCheck,
 }
 
-export function AppIdentity({ icon, accent }: { icon: AppIconKey; accent: string }) {
+export function AppIdentity({
+  icon,
+  accent,
+  iconUrl,
+  alt,
+}: {
+  icon: AppIconKey
+  accent: string
+  iconUrl?: string
+  alt?: string
+}) {
   const Icon = icons[icon]
+
   return (
     <div className="app-identity" style={{ '--app-accent': accent } as React.CSSProperties}>
-      <Icon size={27} strokeWidth={1.8} />
+      {iconUrl ? (
+        <img
+          src={iconUrl}
+          alt={alt ?? ''}
+          width={34}
+          height={34}
+          loading="lazy"
+          decoding="async"
+          style={{ width: 34, height: 34, objectFit: 'contain', borderRadius: 8 }}
+        />
+      ) : (
+        <Icon size={27} strokeWidth={1.8} />
+      )}
     </div>
   )
 }
