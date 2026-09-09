@@ -140,6 +140,7 @@ export const apps: AppEntry[] = [
     icon: 'cube',
     accent: '#5db8ff',
     tags: ['goodpack', '3d', 'modelo', 'work'],
+    appUrl: 'https://brunoebaraujo.github.io/GPBR_3D_Model/',
     githubUrl: 'https://github.com/Brunoebaraujo/GPBR_3D_Model',
   },
   {
