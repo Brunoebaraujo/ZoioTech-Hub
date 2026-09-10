@@ -61,9 +61,10 @@ export const apps: AppEntry[] = [
     categories: ['family'],
     status: 'development',
     icon: 'quest',
-    iconUrl: 'https://raw.githubusercontent.com/Brunoebaraujo/aurisquest/main/src/assets/auri.svg',
+    iconUrl: '/ZoioTech-Hub/auris-quest.png',
     accent: '#8f7cff',
     tags: ['família', 'missões', 'recompensas', 'gamificação'],
+    appUrl: 'https://aurisquest.lovable.app/auth',
     githubUrl: 'https://github.com/Brunoebaraujo/aurisquest',
   },
   {
@@ -153,17 +154,6 @@ export const apps: AppEntry[] = [
     accent: '#3be0b8',
     tags: ['auris', 'experimento', 'oasis'],
     githubUrl: 'https://github.com/Brunoebaraujo/Auris-Oasis',
-  },
-  {
-    id: 'avaliacao-theo',
-    name: 'Avaliação Theo',
-    description: 'Projeto de estudo e avaliação escolar.',
-    categories: ['family'],
-    status: 'lab',
-    icon: 'assessment',
-    accent: '#c0eb5e',
-    tags: ['estudo', 'avaliação', 'escola'],
-    githubUrl: 'https://github.com/Brunoebaraujo/avaliacaoTheo',
   },
 ]
 
