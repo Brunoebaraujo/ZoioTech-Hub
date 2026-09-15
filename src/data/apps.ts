@@ -153,6 +153,7 @@ export const apps: AppEntry[] = [
     icon: 'oasis',
     accent: '#3be0b8',
     tags: ['auris', 'experimento', 'oasis'],
+    appUrl: 'https://brunoebaraujo.github.io/Auris-Oasis/',
     githubUrl: 'https://github.com/Brunoebaraujo/Auris-Oasis',
   },
 ]
