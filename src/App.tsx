@@ -76,10 +76,26 @@ export default function App() {
                 <div className="desktop-status-row">
                   {statuses.map((item) => <button key={item.key} onClick={() => setStatus(item.key)} className={status === item.key ? 'active' : ''}>{item.label}</button>)}
                 </div>
-                <div className="section-heading"><div><span className="section-kicker">APLICAÇÕES</span><h2>{category === 'all' ? 'Todos os projetos' : CATEGORY_LABELS[category]}</h2></div><span>{filtered.length} de {apps.length}</span></div>
-                <div className="app-grid">
-                  {filtered.map((app) => <AppCard key={app.id} app={app} />)}
+                <div className="section-heading">
+                  <div><span className="section-kicker">APLICAÇÕES · HUB 2026.11.06.2</span><h2>{category === 'all' ? 'Todos os projetos' : CATEGORY_LABELS[category]}</h2></div>
+                  <span>{filtered.length} de {apps.length}</span>
                 </div>
+                {category === 'all' && status === 'all' && !query.trim() ? (
+                  <>
+                    <div className="section-heading"><div><span className="section-kicker">PRIORIDADE</span><h2>Trabalho</h2></div></div>
+                    <div className="app-grid">
+                      {filtered.filter((app) => app.categories.includes('work')).map((app) => <AppCard key={app.id} app={app} />)}
+                    </div>
+                    <div className="section-heading"><div><span className="section-kicker">OUTRAS CATEGORIAS</span><h2>Demais aplicativos</h2></div></div>
+                    <div className="app-grid">
+                      {filtered.filter((app) => !app.categories.includes('work')).map((app) => <AppCard key={app.id} app={app} />)}
+                    </div>
+                  </>
+                ) : (
+                  <div className="app-grid">
+                    {filtered.map((app) => <AppCard key={app.id} app={app} />)}
+                  </div>
+                )}
                 {filtered.length === 0 && <div className="empty-state">Nenhum projeto encontrado com esses filtros.</div>}
               </>
             )}
