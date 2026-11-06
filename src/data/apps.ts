@@ -1,11 +1,11 @@
 import type { AppCategory, AppEntry, AppStatus } from '../types/app'
 
 export const CATEGORY_LABELS: Record<AppCategory, string> = {
+  work: 'Trabalho',
   family: 'Família',
   personal: 'Pessoal',
   games: 'Games',
   rpg: 'RPG',
-  work: 'Trabalho',
   lab: 'Lab',
 }
 
@@ -17,6 +17,41 @@ export const STATUS_LABELS: Record<AppStatus, string> = {
 }
 
 export const apps: AppEntry[] = [
+  {
+    id: 'comercial-em-foco',
+    name: 'Comercial em Foco',
+    description: 'Painel comercial para acompanhar clientes, assuntos, tarefas e interações.',
+    categories: ['work'],
+    status: 'online',
+    icon: 'assessment',
+    accent: '#328fff',
+    tags: ['comercial', 'clientes', 'tarefas', 'assuntos', 'crm', 'trabalho'],
+    appUrl: 'https://brunoebaraujo.github.io/comercial-em-foco/painel',
+    githubUrl: 'https://github.com/Brunoebaraujo/comercial-em-foco',
+  },
+  {
+    id: 'gpbr-3d',
+    name: 'GPBR 3D Model',
+    description: 'Experimentos e visualizações 3D ligados a soluções Goodpack.',
+    categories: ['work'],
+    status: 'lab',
+    icon: 'cube',
+    accent: '#5db8ff',
+    tags: ['goodpack', '3d', 'modelo', 'work'],
+    appUrl: 'https://brunoebaraujo.github.io/GPBR_3D_Model/',
+    githubUrl: 'https://github.com/Brunoebaraujo/GPBR_3D_Model',
+  },
+  {
+    id: 'tco-engine',
+    name: 'TCO Engine',
+    description: 'Análise comercial de Total Cost of Ownership com suporte de IA.',
+    categories: ['work'],
+    status: 'development',
+    icon: 'tco',
+    accent: '#4f8cff',
+    tags: ['goodpack', 'tco', 'ia', 'comercial'],
+    githubUrl: 'https://github.com/Brunoebaraujo/TCO-Agent',
+  },
   {
     id: 'estudos-criancas',
     name: 'Estudos Crianças',
@@ -66,17 +101,6 @@ export const apps: AppEntry[] = [
     tags: ['família', 'missões', 'recompensas', 'gamificação'],
     appUrl: 'https://aurisquest.lovable.app/auth',
     githubUrl: 'https://github.com/Brunoebaraujo/aurisquest',
-  },
-  {
-    id: 'tco-engine',
-    name: 'TCO Engine',
-    description: 'Análise comercial de Total Cost of Ownership com suporte de IA.',
-    categories: ['work'],
-    status: 'development',
-    icon: 'tco',
-    accent: '#4f8cff',
-    tags: ['goodpack', 'tco', 'ia', 'comercial'],
-    githubUrl: 'https://github.com/Brunoebaraujo/TCO-Agent',
   },
   {
     id: 'meu-vtt',
@@ -131,18 +155,6 @@ export const apps: AppEntry[] = [
     accent: '#ff7c64',
     tags: ['espanhol', 'idioma', 'estudos'],
     githubUrl: 'https://github.com/Brunoebaraujo/espanhol_bruno',
-  },
-  {
-    id: 'gpbr-3d',
-    name: 'GPBR 3D Model',
-    description: 'Experimentos e visualizações 3D ligados a soluções Goodpack.',
-    categories: ['work'],
-    status: 'lab',
-    icon: 'cube',
-    accent: '#5db8ff',
-    tags: ['goodpack', '3d', 'modelo', 'work'],
-    appUrl: 'https://brunoebaraujo.github.io/GPBR_3D_Model/',
-    githubUrl: 'https://github.com/Brunoebaraujo/GPBR_3D_Model',
   },
   {
     id: 'auris-oasis',
