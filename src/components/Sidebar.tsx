@@ -6,11 +6,11 @@ export type NavKey = 'all' | AppCategory
 
 const items: { key: NavKey; label: string; icon: typeof Home }[] = [
   { key: 'all', label: 'Home', icon: Home },
+  { key: 'work', label: 'Trabalho', icon: BriefcaseBusiness },
   { key: 'family', label: 'Família', icon: UsersRound },
   { key: 'personal', label: 'Pessoal', icon: UserRound },
   { key: 'games', label: 'Games', icon: Gamepad2 },
   { key: 'rpg', label: 'RPG', icon: Dices },
-  { key: 'work', label: 'Trabalho', icon: BriefcaseBusiness },
   { key: 'lab', label: 'Lab', icon: FlaskConical },
 ]
 
