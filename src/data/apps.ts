@@ -19,8 +19,8 @@ export const STATUS_LABELS: Record<AppStatus, string> = {
 export const apps: AppEntry[] = [
   {
     id: 'comercial-em-foco',
-    name: 'Comercial em Foco',
-    description: 'Painel comercial para acompanhar clientes, assuntos, tarefas e interações.',
+    name: 'Assuntos',
+    description: 'Controle comercial de assuntos, ações, tarefas, clientes e interações.',
     categories: ['work'],
     status: 'online',
     icon: 'assessment',
